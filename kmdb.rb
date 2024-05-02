@@ -115,8 +115,8 @@ for movie in all_movies
     title = movie["title"]
     year = movie["year_released"]
     rated=movie["rated"]
-    #studio_id= movie["studio_id"]
-    studio_name= movie.studio.studio_name
+    studio_id= movie["studio_id"]
+    studio_name= studio["id"]
     # display the first_name and last_name
     puts "#{title}  #{year} #{rated}    #{studio_name}"
   end
