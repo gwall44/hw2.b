@@ -112,10 +112,13 @@ all_movies = Movie.all
 # loop through movies
 for movie in all_movies
     # read each row
-    first_name = contact["first_name"]
-    last_name = contact["last_name"]
+    title = movie["title"]
+    year = movie["year_released"]
+    rated=movie["rated"]
+    #studio_id= movie["studio_id"]
+    studio_name= movie.studio.studio_name
     # display the first_name and last_name
-    puts "#{first_name} #{last_name}"
+    puts "#{title}  #{year} #{rated}    #{studio_name}"
   end
   
 
