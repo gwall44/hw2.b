@@ -86,15 +86,38 @@ Role.destroy_all
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
-# TODO!
+warner_bros = Studio.new(studio_name: "Warner Bros.")
+warner_bros.save
+
+batman_begins = Movie.new(title: "Batman Begins", year_released: 2005, rated: "PG-13")
+batman_begins["studio_id"]= warner_bros["id"]
+batman_begins.save
+
+the_dark_knight = Movie.new(title: "The Dark Knight", year_released: 2008, rated: "PG-13", studio_id: warner_bros)
+the_dark_knight["studio_id"]= warner_bros["id"]
+the_dark_knight.save
+
+the_dark_knight_rises = Movie.new(title: "The Dark Knight Rises", year_released: 2012, rated: "PG-13", studio_id: warner_bros)
+the_dark_knight_rises["studio_id"]= warner_bros["id"]
+the_dark_knight_rises.save
 
 # Prints a header for the movies output
+puts ""
 puts "Movies"
-puts "======"
+puts "========"
 puts ""
 
 # Query the movies data and loop through the results to display the movies output.
-# TODO!
+all_movies = Movie.all
+# loop through movies
+for movie in all_movies
+    # read each row
+    first_name = contact["first_name"]
+    last_name = contact["last_name"]
+    # display the first_name and last_name
+    puts "#{first_name} #{last_name}"
+  end
+  
 
 # Prints a header for the cast output
 puts ""
