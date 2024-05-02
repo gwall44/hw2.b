@@ -115,8 +115,10 @@ for movie in all_movies
     title = movie["title"]
     year = movie["year_released"]
     rated=movie["rated"]
+
     studio_id= movie["studio_id"]
-    studio_name= studio["id"]
+    studio_name = Studio.where({"id"=> studio_id}).first.studio_name
+
     # display the first_name and last_name
     puts "#{title}  #{year} #{rated}    #{studio_name}"
   end
