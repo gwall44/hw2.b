@@ -207,7 +207,7 @@ for movie in all_movies
     # Display cast output with movie name
     character_name = role["character_name"]
     actor_name = actor["name"]
-    puts "#{title}  #{character_name}  #{actor_name}"
+    puts "#{title}  #{actor_name} #{character_name}  "
   end
 end
 
