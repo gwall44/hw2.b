@@ -101,6 +101,40 @@ the_dark_knight_rises = Movie.new(title: "The Dark Knight Rises", year_released:
 the_dark_knight_rises["studio_id"]= warner_bros["id"]
 the_dark_knight_rises.save
 
+# Insert actors manually
+actor1 = Actor.new(name: "Christian Bale")
+actor1.save
+
+actor2 = Actor.new(name: "Michael Caine")
+actor2.save
+
+actor3 = Actor.new(name: "Liam Neeson")
+actor3.save
+
+actor4 = Actor.new(name: "Katie Holmes")
+actor4.save
+
+actor5 = Actor.new(name: "Gary Oldman")
+actor5.save
+
+actor6 = Actor.new(name: "Heath Ledger")
+actor6.save
+
+actor7 = Actor.new(name: "Aaron Eckhart")
+actor7.save
+
+actor8 = Actor.new(name: "Maggie Gyllenhaal")
+actor8.save
+
+actor9 = Actor.new(name: "Tom Hardy")
+actor9.save
+
+actor10 = Actor.new(name: "Joseph Gordon-Levitt")
+actor10.save
+
+actor11 = Actor.new(name: "Anne Hathaway")
+actor11.save
+
 # Prints a header for the movies output
 puts ""
 puts "Movies"
@@ -119,8 +153,8 @@ for movie in all_movies
     studio_id= movie["studio_id"]
     studio_name = Studio.where({"id"=> studio_id}).first.studio_name
 
-    # display the first_name and last_name
-    puts "#{title}  #{year} #{rated}    #{studio_name}"
+    # display 
+    puts "#{title}    #{year}   #{rated}      #{studio_name}"
   end
   
 
