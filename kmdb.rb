@@ -138,23 +138,23 @@ actor11.save
 
 
 # Insert roles manually
-Role.new({ "movie_id" => 1, "actor_id" => actor1["id"], "character_name" => "Bruce Wayne" }).save
-Role.new({ "movie_id" => 1, "actor_id" => actor2["id"], "character_name" => "Alfred" }).save
-Role.new({ "movie_id" => 1, "actor_id" => actor3["id"], "character_name" => "Ra's Al Ghul" }).save
-Role.new({ "movie_id" => 1, "actor_id" => actor4["id"], "character_name" => "Rachel Dawes" }).save
-Role.new({ "movie_id" => 1, "actor_id" => actor5["id"], "character_name" => "Commissioner Gordon" }).save
+Role.new({ "movie_id" => batman_begins["id"], "actor_id" => actor1["id"], "character_name" => "Bruce Wayne" }).save
+Role.new({ "movie_id" => batman_begins["id"],"actor_id" => actor2["id"], "character_name" => "Alfred" }).save
+Role.new({ "movie_id" => batman_begins["id"],"actor_id" => actor3["id"], "character_name" => "Ra's Al Ghul" }).save
+Role.new({ "movie_id" => batman_begins["id"],"actor_id" => actor4["id"], "character_name" => "Rachel Dawes" }).save
+Role.new({ "movie_id" => batman_begins["id"],"actor_id" => actor5["id"], "character_name" => "Commissioner Gordon" }).save
 
-Role.new({ "movie_id" => 2, "actor_id" => actor1["id"], "character_name" => "Bruce Wayne" }).save
-Role.new({ "movie_id" => 2, "actor_id" => actor6["id"], "character_name" => "Joker" }).save
-Role.new({ "movie_id" => 2, "actor_id" => actor7["id"], "character_name" => "Harvey Dent" }).save
-Role.new({ "movie_id" => 2, "actor_id" => actor2["id"], "character_name" => "Alfred" }).save
-Role.new({ "movie_id" => 2, "actor_id" => actor8["id"], "character_name" => "Rachel Dawes" }).save
+Role.new({ "movie_id" => the_dark_knight["id"],"actor_id" => actor1["id"], "character_name" => "Bruce Wayne" }).save
+Role.new({ "movie_id" => the_dark_knight["id"], "actor_id" => actor6["id"], "character_name" => "Joker" }).save
+Role.new({ "movie_id" => the_dark_knight["id"],"actor_id" => actor7["id"], "character_name" => "Harvey Dent" }).save
+Role.new({ "movie_id" => the_dark_knight["id"],"actor_id" => actor2["id"], "character_name" => "Alfred" }).save
+Role.new({ "movie_id" => the_dark_knight["id"], "actor_id" => actor8["id"], "character_name" => "Rachel Dawes" }).save
 
-Role.new({ "movie_id" => 3, "actor_id" => actor1["id"], "character_name" => "Bruce Wayne" }).save
-Role.new({ "movie_id" => 3, "actor_id" => actor5["id"], "character_name" => "Commissioner Gordon" }).save
-Role.new({ "movie_id" => 3, "actor_id" => actor9["id"], "character_name" => "Bane" }).save
-Role.new({ "movie_id" => 3, "actor_id" => actor10["id"], "character_name" => "John Blake" }).save
-Role.new({ "movie_id" => 3, "actor_id" => actor11["id"], "character_name" => "Selina Kyle" }).save
+Role.new({ "movie_id" => the_dark_knight_rises["id"], "actor_id" => actor1["id"], "character_name" => "Bruce Wayne" }).save
+Role.new({  "movie_id" => the_dark_knight_rises["id"],"actor_id" => actor5["id"], "character_name" => "Commissioner Gordon" }).save
+Role.new({  "movie_id" => the_dark_knight_rises["id"],"actor_id" => actor9["id"], "character_name" => "Bane" }).save
+Role.new({  "movie_id" => the_dark_knight_rises["id"],"actor_id" => actor10["id"], "character_name" => "John Blake" }).save
+Role.new({  "movie_id" => the_dark_knight_rises["id"],"actor_id" => actor11["id"], "character_name" => "Selina Kyle" }).save
 
 
 # Prints a header for the movies output
@@ -195,7 +195,6 @@ all_movies = Movie.all
 for movie in all_movies
   # Read movie information
   title = movie["title"]
-  puts "\n#{title}\n========="
 
   # Find roles for the current movie
   movie_roles = Role.where({ "movie_id" => movie["id"] })
