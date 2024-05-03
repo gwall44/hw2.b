@@ -102,38 +102,60 @@ the_dark_knight_rises["studio_id"]= warner_bros["id"]
 the_dark_knight_rises.save
 
 # Insert actors manually
-actor1 = Actor.new(name: "Christian Bale")
+# Insert actors manually
+actor1 = Actor.new("name" => "Christian Bale")
 actor1.save
 
-actor2 = Actor.new(name: "Michael Caine")
+actor2 = Actor.new("name" => "Michael Caine")
 actor2.save
 
-actor3 = Actor.new(name: "Liam Neeson")
+actor3 = Actor.new("name" => "Liam Neeson")
 actor3.save
 
-actor4 = Actor.new(name: "Katie Holmes")
+actor4 = Actor.new("name" => "Katie Holmes")
 actor4.save
 
-actor5 = Actor.new(name: "Gary Oldman")
+actor5 = Actor.new("name" => "Gary Oldman")
 actor5.save
 
-actor6 = Actor.new(name: "Heath Ledger")
+actor6 = Actor.new("name" => "Heath Ledger")
 actor6.save
 
-actor7 = Actor.new(name: "Aaron Eckhart")
+actor7 = Actor.new("name" => "Aaron Eckhart")
 actor7.save
 
-actor8 = Actor.new(name: "Maggie Gyllenhaal")
+actor8 = Actor.new("name" => "Maggie Gyllenhaal")
 actor8.save
 
-actor9 = Actor.new(name: "Tom Hardy")
+actor9 = Actor.new("name" => "Tom Hardy")
 actor9.save
 
-actor10 = Actor.new(name: "Joseph Gordon-Levitt")
+actor10 = Actor.new("name" => "Joseph Gordon-Levitt")
 actor10.save
 
-actor11 = Actor.new(name: "Anne Hathaway")
+actor11 = Actor.new("name" => "Anne Hathaway")
 actor11.save
+
+
+# Insert roles manually
+Role.new({ "movie_id" => 1, "actor_id" => actor1["id"], "character_name" => "Bruce Wayne" }).save
+Role.new({ "movie_id" => 1, "actor_id" => actor2["id"], "character_name" => "Alfred" }).save
+Role.new({ "movie_id" => 1, "actor_id" => actor3["id"], "character_name" => "Ra's Al Ghul" }).save
+Role.new({ "movie_id" => 1, "actor_id" => actor4["id"], "character_name" => "Rachel Dawes" }).save
+Role.new({ "movie_id" => 1, "actor_id" => actor5["id"], "character_name" => "Commissioner Gordon" }).save
+
+Role.new({ "movie_id" => 2, "actor_id" => actor1["id"], "character_name" => "Bruce Wayne" }).save
+Role.new({ "movie_id" => 2, "actor_id" => actor6["id"], "character_name" => "Joker" }).save
+Role.new({ "movie_id" => 2, "actor_id" => actor7["id"], "character_name" => "Harvey Dent" }).save
+Role.new({ "movie_id" => 2, "actor_id" => actor2["id"], "character_name" => "Alfred" }).save
+Role.new({ "movie_id" => 2, "actor_id" => actor8["id"], "character_name" => "Rachel Dawes" }).save
+
+Role.new({ "movie_id" => 3, "actor_id" => actor1["id"], "character_name" => "Bruce Wayne" }).save
+Role.new({ "movie_id" => 3, "actor_id" => actor5["id"], "character_name" => "Commissioner Gordon" }).save
+Role.new({ "movie_id" => 3, "actor_id" => actor9["id"], "character_name" => "Bane" }).save
+Role.new({ "movie_id" => 3, "actor_id" => actor10["id"], "character_name" => "John Blake" }).save
+Role.new({ "movie_id" => 3, "actor_id" => actor11["id"], "character_name" => "Selina Kyle" }).save
+
 
 # Prints a header for the movies output
 puts ""
